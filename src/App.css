@@ -1,0 +1,19 @@
+#root{
+  padding: 0 2rem 2rem 2rem;
+}
+
+.header{
+  border: 1px red solid;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header--ul{
+  display: flex;
+  list-style-type: none;
+}
+
+.header--li{
+  margin: 1rem;
+}
