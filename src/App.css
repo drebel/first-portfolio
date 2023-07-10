@@ -17,3 +17,8 @@
 .header--li{
   margin: 1rem;
 }
+
+.hero{
+  padding: 10rem 5rem;
+  border: 1px green solid;
+}
