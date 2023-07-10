@@ -41,3 +41,7 @@ section{
 .about{
   border: 1px blue solid;
 }
+
+.contact{
+  border: 1px orange solid;
+}

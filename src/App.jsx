@@ -3,6 +3,7 @@ import Header from './components/Header.jsx'
 import Hero from './components/Hero.jsx'
 import Work from './components/Work.jsx'
 import About from './components/About.jsx'
+import Contact from './components/Contact.jsx'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
       <Hero />
       <Work />
       <About />
+      <Contact />
       {/* <Hero />
       <Work />
       <Contact />
