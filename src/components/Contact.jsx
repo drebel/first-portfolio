@@ -7,7 +7,7 @@ export default function Contact(){
     const [message, setMessage] = useState('')
 
     function handleChange(event){
-        
+
 
     }
 
@@ -28,6 +28,10 @@ export default function Contact(){
                 <textarea name="" id="form--message" placeholder="Message" cols="30" rows="10" onChange={handleChange}></textarea>
                 <button onClick={handleSubmit}>Send Message</button>
             </form>
+            <div className="contact--emailArea">
+                <h1>DrewBeland.dpt@gmail.com</h1>
+                <button className="CTA contact--emailButton">Send Mail</button>
+            </div>
         </section>
     )
 }

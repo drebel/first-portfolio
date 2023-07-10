@@ -4,6 +4,7 @@ import Hero from './components/Hero.jsx'
 import Work from './components/Work.jsx'
 import About from './components/About.jsx'
 import Contact from './components/Contact.jsx'
+import Footer from './components/Footer.jsx'
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
       <Work />
       <About />
       <Contact />
+      <Footer />
       {/* <Hero />
       <Work />
       <Contact />
