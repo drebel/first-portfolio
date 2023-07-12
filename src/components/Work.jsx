@@ -2,7 +2,7 @@
 export default function Work(){
 
     return (
-        <section className="work">
+        <section className="work" id="work">
             <h2>My Work</h2>
             <article className="work--item">
                 <img src="src\assets\gift-list-screenshot.png" alt="Gift List Screenshot" />

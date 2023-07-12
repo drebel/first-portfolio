@@ -1,5 +1,6 @@
 import './App.css'
 import Header from './components/Header.jsx'
+import Header2 from './components/Header2.jsx'
 import Hero from './components/Hero.jsx'
 import Work from './components/Work.jsx'
 import About from './components/About.jsx'
@@ -10,14 +11,11 @@ function App() {
 
   return (
     <>
-      <Header />
-      <Hero />
-      <Work />
-      <About />
-      <Contact />
-      <Footer />
+      <Header2 />
+      {/* <Header2 /> */}
       {/* <Hero />
       <Work />
+      <About />
       <Contact />
       <Footer /> */}
     </>

@@ -1,18 +1,4 @@
-import {useState} from 'react'
-
-export default function Header(){
-
-    const [isMobileNavVisible, setIsMobileNavVisible] = useState(false)
-    const menuStyle = {
-        backgroundImage: isMobileNavVisible ? 'url(src/assets/icons8-cancel-50.png)' : 'url(src/assets/icons8-menu-50.png)'
-    }
-    const primaryNavStyle = {
-        transform: isMobileNavVisible ? 'translateY(0%)' : 'translateY(100%)'
-    }
-
-    function handleClick(){
-        setIsMobileNavVisible(!isMobileNavVisible)
-    }
+export default function Header2(){
 
     return (
         <header className="primary-header flex" id="header">
@@ -20,7 +6,7 @@ export default function Header(){
                 <img src='src/assets/icons8-happy-cloud-48.png' className="logo"/>
             </div>
 
-            <nav id="primary-navigation" className="primary-navigation" style={primaryNavStyle}>
+            <nav id="primary-navigation" className="primary-navigation flex">
                 <ul className='flex'>
                     <li className="">
                         <a className="" href="#header">
@@ -45,7 +31,7 @@ export default function Header(){
                 </ul>
             </nav>
 
-            <button className="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false" onClick={handleClick} style={menuStyle}>
+            <button className="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
                 <span className="sr-only">Menu</span>
             </button>
 

@@ -17,7 +17,7 @@ export default function Contact(){
     }
 
     return (
-        <section className="contact">
+        <section className="contact" id="contact">
             <h2>Contact</h2>
             <form>
                 <label htmlFor="form--name">Name</label>
