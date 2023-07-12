@@ -94,6 +94,8 @@ body{
 .primary-header{
   justify-content: space-between;
   border: 1px red solid;
+  position: sticky;
+  top: 0;
 }
 
 .primary-header ul{
@@ -104,8 +106,6 @@ body{
 
 .primary-navigation{
   align-items: center;
-  position: sticky;
-  top: 0;
   border: 1px blue solid;
 }
 
@@ -127,11 +127,18 @@ body{
 }
 
 
+@media (min-width: 35em){
+  #mobile-nav{
+    display: none;
+  }
+}
+
 
 @media (max-width: 35em){
   .primary-navigation{
     position: fixed;
     width: 100%;
+    height: 100vh;
   }
 
   .primary-navigation ul{
@@ -139,10 +146,12 @@ body{
     z-index: 1000;
     inset: 0 0 0 0%;
     width: 100%;
+    height: 100vh;
 
     flex-direction: column;
     padding: min(30vh, 10rem) 2rem;
     margin: 0;
+    align-items: center;
 
     background: hsla(152, 90%, 41%, 0);
   }
@@ -160,6 +169,10 @@ body{
     aspect-ratio: 1;
     
     /* border: 0; */
+  }
+
+  #desktop-nav{
+    display: none;
   }
 }
 

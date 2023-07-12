@@ -7,10 +7,15 @@ export default function Header2(){
         backgroundImage: isMobileNavVisible ? 'url(src/assets/icons8-cancel-50.png)' : 'url(src/assets/icons8-menu-50.png)'
     }
 
+    const mobileNavMovement = {
+        transform: isMobileNavVisible ? 'translateY(0%)' : 'translateY(-100%)'
+    }
+
     
     function handleClick(){
         setIsMobileNavVisible(!isMobileNavVisible)
     }
+
 
     return (
         <header className="primary-header flex" id="header">
@@ -18,7 +23,32 @@ export default function Header2(){
                 <img src='src/assets/icons8-happy-cloud-48.png' className="logo"/>
             </div>
 
-            <nav id="primary-navigation" className="primary-navigation flex">
+            <nav id="mobile-nav" className="primary-navigation flex " style={mobileNavMovement}>
+                <ul className='flex'>
+                    <li className="">
+                        <a className="" href="#header">
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li className="">
+                        <a className="" href="#work">
+                            <span>Work</span>
+                        </a>
+                    </li>
+                    <li className="">
+                        <a className="" href="#about">
+                            <span>About</span>
+                        </a>
+                    </li>
+                    <li className="">
+                        <a className="" href="#contact">
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav id="desktop-nav" className="primary-navigation flex">
                 <ul className='flex'>
                     <li className="">
                         <a className="" href="#header">
