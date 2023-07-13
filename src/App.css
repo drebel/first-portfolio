@@ -51,6 +51,13 @@
   border: 0;
 }
 
+.cta{
+  text-decoration: none;
+  border: 1px red solid;
+  border-radius: 50px;
+  padding: .5rem 2rem;
+}
+
 /* colors */
 
 /* typography */
@@ -62,6 +69,8 @@
 html{
   color-scheme: light dark;
   scroll-padding-top: 68px;
+  background: #f7f8f3;;
+
 }
 
 body{
@@ -69,7 +78,6 @@ body{
   justify-content: center;
   font-family: Poppins, sans-serif;
   font-size: 62.5%;
-
   overflow-x: hidden;
 }
 
@@ -84,30 +92,29 @@ body{
 /* primary header */
 
 .logo{
-  margin: 0.5rem clamp(1.5rem, 5vw, 3.5rem);
-  border: 1px green solid;
+  margin: 0.5rem 1.5rem;
 }
 
 .logo-div{
-  border: 1px yellow solid;
 }
 
 .primary-header{
   justify-content: space-between;
-  border: 1px red solid;
   position: sticky;
   top: 0;
+  background: #f7f8f3;;
+  box-shadow:0 1rem 1rem #3b42502f;
+  z-index: 1001;
 }
 
 .primary-header ul{
   align-items: center;
   justify-content: space-between;
-  border: 1px orangered dotted;
 }
 
 .primary-navigation{
   align-items: center;
-  border: 1px blue solid;
+
 }
 
 .primary-navigation ul{
@@ -116,7 +123,7 @@ body{
   align-items: center;
   justify-content: space-between;
   list-style: none;
-  border: 1px purple solid;
+
 }
 
 .primary-navigation a{
@@ -139,12 +146,12 @@ body{
   .primary-navigation{
     position: fixed;
     width: 100%;
-    height: 100vh;
+    height: 100svh;
+
   }
 
   .primary-navigation ul{
 
-    z-index: 1000;
     inset: 0 0 0 0%;
     width: 100%;
     height: 100%;
@@ -154,7 +161,8 @@ body{
     margin: 0;
     align-items: center;
 
-    background: hsla(152, 90%, 41%, 0);
+    background: #f7f8f3;;
+
   }
 
   .mobile-nav-toggle{
@@ -182,13 +190,13 @@ body{
 /* ----------------------------- */
 
 .header{
-  border: 3px red solid;
+
 }
 
 .hero{
-  border: 1px green solid;
   padding-top: 10rem;
   padding-bottom: 10rem;
+
 }
 
 .work{
