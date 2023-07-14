@@ -2,7 +2,7 @@
 export default function Hero(){
 
     return (
-        <section className="hero">
+        <section className="hero" id="hero">
             <h1>Drew Beland</h1>
             <h2>Physical Therapist. Software Engineer.</h2>
             <button>View Work</button>

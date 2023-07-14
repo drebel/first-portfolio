@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export default function Header2(){
 
@@ -17,6 +17,7 @@ export default function Header2(){
     }
 
 
+
     return (
         <header className="primary-header flex" id="header">
             <div className='logo-div'>
@@ -26,22 +27,22 @@ export default function Header2(){
             <nav id="mobile-nav" className="primary-navigation flex " style={mobileNavMovement}>
                 <ul className='flex'>
                     <li className="">
-                        <a className="" href="#header">
+                        <a className="" href="#header" onClick={handleClick}>
                             <span>Home</span>
                         </a>
                     </li>
                     <li className="">
-                        <a className="" href="#work">
+                        <a className="" href="#work" onClick={handleClick}>
                             <span>Work</span>
                         </a>
                     </li>
                     <li className="">
-                        <a className="" href="#about">
+                        <a className="" href="#about" onClick={handleClick}>
                             <span>About</span>
                         </a>
                     </li>
                     <li className="">
-                        <a className="" href="#contact">
+                        <a className="" href="#contact" onClick={handleClick}>
                             <span>Contact</span>
                         </a>
                     </li>
@@ -51,7 +52,7 @@ export default function Header2(){
             <nav id="desktop-nav" className="primary-navigation flex">
                 <ul className='flex'>
                     <li className="">
-                        <a className="" href="#header">
+                        <a className="" href="#hero">
                             <span>Home</span>
                         </a>
                     </li>
