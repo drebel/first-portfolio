@@ -19,7 +19,8 @@ export default function Header2(){
 
 
     return (
-        <header className="primary-header flex" id="header">
+        <header id="header">
+            <div id="header-container" className="primary-header flex">
             <div className='logo-div'>
                 <img src='src/assets/icons8-happy-cloud-48.png' className="logo"/>
             </div>
@@ -27,22 +28,22 @@ export default function Header2(){
             <nav id="mobile-nav" className="primary-navigation flex " style={mobileNavMovement}>
                 <ul className='flex'>
                     <li className="">
-                        <a className="" href="#header" onClick={handleClick}>
+                        <a className="primary-navigation--a" href="/" onClick={handleClick}>
                             <span>Home</span>
                         </a>
                     </li>
                     <li className="">
-                        <a className="" href="#work" onClick={handleClick}>
+                        <a className="primary-navigation--a" href="#work" onClick={handleClick}>
                             <span>Work</span>
                         </a>
                     </li>
                     <li className="">
-                        <a className="" href="#about" onClick={handleClick}>
+                        <a className="primary-navigation--a" href="#about" onClick={handleClick}>
                             <span>About</span>
                         </a>
                     </li>
                     <li className="">
-                        <a className="" href="#contact" onClick={handleClick}>
+                        <a className="primary-navigation--a cta" href="#contact" onClick={handleClick}>
                             <span>Contact</span>
                         </a>
                     </li>
@@ -50,24 +51,24 @@ export default function Header2(){
             </nav>
 
             <nav id="desktop-nav" className="primary-navigation flex">
-                <ul className='flex'>
+                <ul className='flex primary-navigation--ul'>
                     <li className="">
-                        <a className="" href="#hero">
+                        <a className="primary-navigation--a" href="/">
                             <span>Home</span>
                         </a>
                     </li>
                     <li className="">
-                        <a className="" href="#work">
+                        <a className="primary-navigation--a" href="#work">
                             <span>Work</span>
                         </a>
                     </li>
                     <li className="">
-                        <a className="" href="#about">
+                        <a className="primary-navigation--a" href="#about">
                             <span>About</span>
                         </a>
                     </li>
                     <li className="">
-                        <a className="" href="#contact">
+                        <a className="cta primary-navigation--a" href="#contact">
                             <span>Contact</span>
                         </a>
                     </li>
@@ -77,6 +78,8 @@ export default function Header2(){
             <button className="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false" onClick={handleClick} style={menuStyle}>
                 <span className="sr-only">Menu</span>
             </button>
+            </div>
+            
 
         </header>
     )

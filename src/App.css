@@ -1,5 +1,105 @@
-/* custom properties */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
 
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+/* 
+  9. Font Weight
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+
+/* --------------- */
+/* custom properties */
+/* --------------- */
+
+:root{
+  --background-color: #f7f8f3;
+
+  --red:#d74034;
+  --white:#f7f8f3;
+
+  --text-darker:#3b4250;
+  --text-dark:#8b93a3;
+  --text-white: #f7f8f3;
+
+
+  --ff-primary:'Lexend Deca', sans-serif;
+
+  --ff-body: var(--ff-primary);
+  --ff-heading: var(--ff-primary);
+
+  --fw-regular: 400;
+  --fw-semi-bold: 500;
+  --fw-bold: 700;
+
+  --fs-400: 1.6rem;
+  --fs-500: 1.8rem;
+  --fs-600: 2rem
+}
 
 /* --------------- */
 /* utility classes */
@@ -51,12 +151,7 @@
   border: 0;
 }
 
-.cta{
-  text-decoration: none;
-  border: 1px red solid;
-  border-radius: 50px;
-  padding: .5rem 2rem;
-}
+
 
 /* colors */
 
@@ -69,14 +164,13 @@
 html{
   color-scheme: light dark;
   scroll-padding-top: 68px;
-  background: #f7f8f3;;
-
+  background: var(--background-color);
 }
 
 body{
   display: flex;
   justify-content: center;
-  font-family: Poppins, sans-serif;
+  font-family: var(--ff-primary);
   font-size: 62.5%;
   overflow-x: hidden;
 }
@@ -84,9 +178,16 @@ body{
 #root{
   font-size: 1.125rem;
   width: 100%;
-  max-width: 1240px;
 }
 
+.hero,
+.work,
+.about,
+.contact{
+  max-width: 1240px;
+  margin: auto;
+  padding: 0 1.5rem;
+}
 
 
 /* primary header */
@@ -98,36 +199,43 @@ body{
 .logo-div{
 }
 
-.primary-header{
-  justify-content: space-between;
+#header{
   position: sticky;
   top: 0;
-  background: #f7f8f3;;
+  background: var(--background-color);
   box-shadow:0 1rem 1rem #3b42502f;
   z-index: 1001;
+}
+
+.primary-header{
+  justify-content: space-between;
+  max-width: 1240px;
+  margin: 0 auto;
 }
 
 .primary-header ul{
   align-items: center;
   justify-content: space-between;
+  
 }
 
 .primary-navigation{
   align-items: center;
+  color: var(--red);
 
 }
 
-.primary-navigation ul{
+.primary-navigation--ul{
   padding: 0;
   margin: 0 1.5rem;
   align-items: center;
   justify-content: space-between;
   list-style: none;
-
 }
 
-.primary-navigation a{
+.primary-navigation--a{
   text-decoration: none;
+  color: var(--red);
 }
 
 .mobile-nav-toggle{
@@ -161,7 +269,7 @@ body{
     margin: 0;
     align-items: center;
 
-    background: #f7f8f3;;
+    background: var(--background-color);
 
   }
 
@@ -183,6 +291,20 @@ body{
   }
 }
 
+.cta{
+  text-decoration: none;
+  border-radius: 50px;
+  padding: .5rem 1.5rem;
+  color: var(--white);
+  background-color: var(--red);
+  box-shadow: rgba(215, 62, 51, 0.3) 0px 0px 25px 0px
+}
+
+h1,
+h2{
+  font-size: var(--fs-600);
+  font-weight: var(--fw-bold);
+}
 
 
 /* ----------------------------- */
@@ -196,7 +318,18 @@ body{
 .hero{
   padding-top: 10rem;
   padding-bottom: 10rem;
+  display: flex;
+  justify-content: center;
 
+}
+
+.hero--container{
+  width: 100%;
+  color: var(--red);
+}
+
+.grow-2{
+  flex-grow:2;
 }
 
 .work{
@@ -209,4 +342,8 @@ body{
 
 .contact{
   border: 1px orange solid;
+}
+
+h2{
+  margin-bottom: 1rem;
 }
