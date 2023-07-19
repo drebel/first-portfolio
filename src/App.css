@@ -465,3 +465,12 @@ h3{
 h2{
   margin-bottom: 1rem;
 }
+
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  box-shadow: rgba(215, 62, 51, 0.3) 0px 0px 5px 0px;
+  border-top-color: rgba(215, 62, 51, 0.3)
+}

@@ -2,7 +2,7 @@
 export default function Footer(){
 
     return (
-        <footer>
+        <footer className="footer">
             <span>Developed by Drew Beland ©</span>
         </footer>
     )
