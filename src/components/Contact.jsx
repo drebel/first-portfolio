@@ -18,8 +18,22 @@ export default function Contact(){
 
     }
 
+    const encode = (data) => {
+        return Object.keys(data)
+            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+            .join("&");
+  }
+
     function handleSubmit(event){
-        event.preventdefault()
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({ "form-name": "contact", "name": formData.name, "email": formData.email, "message": formData.message})
+      })
+        .then(() => alert("Success!"))
+        .catch(error => alert(error));
+
+      event.preventDefault();
 
     }
 
@@ -31,6 +45,7 @@ export default function Contact(){
             <div className="contact--text">
                 <h2>Contact</h2>
                 <form className="form" data-netlify="true">
+                    <input type="hidden" name="form-name" value="contact" />
                     <label htmlFor="form--name">Name</label>
                     <input id='form--name' type="text" placeholder="Name" name="name" value={formData.name} onChange={handleChange}/>
                     <label htmlFor="form--email">Email</label>
