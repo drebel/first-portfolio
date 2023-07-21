@@ -18,24 +18,24 @@ export default function Contact(){
 
     }
 
-    const encode = (data) => {
-        return Object.keys(data)
-            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-            .join("&");
-  }
+//     const encode = (data) => {
+//         return Object.keys(data)
+//             .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+//             .join("&");
+//   }
 
-    function handleSubmit(event){
-        fetch("/", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "contact", "name": formData.name, "email": formData.email, "message": formData.message})
-      })
-        .then(() => alert("Success!"))
-        .catch(error => alert(error));
+    // function handleSubmit(event){
+    //     fetch("/", {
+    //         method: "POST",
+    //         headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    //         body: encode({ "form-name": "contact", "name": formData.name, "email": formData.email, "message": formData.message})
+    //   })
+    //     .then(() => alert("Success!"))
+    //     .catch(error => alert(error));
 
-      event.preventDefault();
+    //   event.preventDefault();
 
-    }
+    // }
 
     return (
         <section className="contact" id="contact">
@@ -44,7 +44,7 @@ export default function Contact(){
             </div>
             <div className="contact--text">
                 <h2>Contact</h2>
-                <form className="form" data-netlify="true" method="POST">
+                <form className="form" data-netlify="true" method="POST" name="contact">
                     <input type="hidden" name="form-name" value="contact" />
                     <label htmlFor="form--name">Name</label>
                     <input id='form--name' type="text" placeholder="Name" name="name" value={formData.name} onChange={handleChange}/>
@@ -52,7 +52,7 @@ export default function Contact(){
                     <input id="form--email" type="text" placeholder="Email" name="email" value={formData.email} onChange={handleChange}/>
                     <label htmlFor="form--message">Message</label>
                     <textarea name="message" value={formData.message} id="form--message" placeholder="Leave a message" cols="30" rows="10" onChange={handleChange} />
-                    <button onClick={handleSubmit} className="cta">Send Message</button>
+                    <button className="cta">Send Message</button>
                 </form>
             </div>
             <div className="contact--email">
