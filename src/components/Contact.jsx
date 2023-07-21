@@ -1,22 +1,22 @@
-import {useState} from "react"
+// import {useState} from "react"
 
 export default function Contact(){
 
-    const [formData, setFormData] = useState(
-        {name: "",
-        email: "",
-        message: ""  
-        }
-    )
+    // const [formData, setFormData] = useState(
+    //     {name: "",
+    //     email: "",
+    //     message: ""  
+    //     }
+    // )
     
-    function handleChange(event){
-        setFormData(prevFormData => ({
-                ...prevFormData,
-                [event.target.name]: event.target.value
-            })
-        )
+    // function handleChange(event){
+    //     setFormData(prevFormData => ({
+    //             ...prevFormData,
+    //             [event.target.name]: event.target.value
+    //         })
+    //     )
 
-    }
+    // }
 
 //     const encode = (data) => {
 //         return Object.keys(data)
@@ -44,15 +44,15 @@ export default function Contact(){
             </div>
             <div className="contact--text">
                 <h2>Contact</h2>
-                <form className="form" data-netlify="true" method="POST" name="contact">
-                    <input type="hidden" name="form-name" value="contact" />
+                <form className="form" data-netlify="true" method="post" name="contact v1">
+                    <input type="hidden" name="form-name" value="contact v1" />
                     <label htmlFor="form--name">Name</label>
-                    <input id='form--name' type="text" placeholder="Name" name="name" value={formData.name} onChange={handleChange}/>
+                    <input id='form--name' type="text" placeholder="Name" name="name"/>
                     <label htmlFor="form--email">Email</label>
-                    <input id="form--email" type="text" placeholder="Email" name="email" value={formData.email} onChange={handleChange}/>
+                    <input id="form--email" type="text" placeholder="Email" name="email"/>
                     <label htmlFor="form--message">Message</label>
-                    <textarea name="message" value={formData.message} id="form--message" placeholder="Leave a message" cols="30" rows="10" onChange={handleChange} />
-                    <button className="cta">Send Message</button>
+                    <textarea name="message" id="form--message" placeholder="Leave a message" cols="30" rows="10" />
+                    <button className="cta" type="submit">Send Message</button>
                 </form>
             </div>
             <div className="contact--email">
