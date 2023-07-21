@@ -44,7 +44,7 @@ export default function Contact(){
             </div>
             <div className="contact--text">
                 <h2>Contact</h2>
-                <form className="form" data-netlify="true" action="POST">
+                <form className="form" data-netlify="true" method="POST">
                     <input type="hidden" name="form-name" value="contact" />
                     <label htmlFor="form--name">Name</label>
                     <input id='form--name' type="text" placeholder="Name" name="name" value={formData.name} onChange={handleChange}/>
