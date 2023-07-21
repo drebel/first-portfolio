@@ -44,7 +44,7 @@ export default function Contact(){
             </div>
             <div className="contact--text">
                 <h2>Contact</h2>
-                <form className="form" data-netlify="true" method="post" name="contact v1">
+                <form className="form" data-netlify="true" method="post" name="contact v1" onSubmit="submit">
                     <input type="hidden" name="form-name" value="contact v1" />
                     <label htmlFor="form--name">Name</label>
                     <input id='form--name' type="text" placeholder="Name" name="name"/>
