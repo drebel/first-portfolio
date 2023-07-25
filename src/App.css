@@ -189,7 +189,7 @@ body{
 .contact{
   max-width: 1350px;
   margin: auto;
-  padding: 0 1.5rem;
+  padding: 5rem 1.5rem;
 }
 
 
@@ -331,15 +331,13 @@ h3{
 /* section specific background   */
 /* ----------------------------- */
 
-.header{
-
-}
-
 .hero{
   padding-top: 10rem;
   padding-bottom: 10rem;
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 80svh;
 }
 
 .hero--container{
@@ -455,7 +453,8 @@ h3{
   padding: 2rem;
   box-shadow: rgba(215,64,52, .3) 0 0 25px;
   border-radius: 20px;
-  margin-bottom: 2rem;
+  margin-top: 5rem;
+  align-items: center;
 }
 
 .contact--email h1{

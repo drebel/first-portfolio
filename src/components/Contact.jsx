@@ -57,7 +57,9 @@ export default function Contact(){
             </div>
             <div className="contact--email">
                 <h1>DrewBeland.dpt@gmail.com</h1>
-                <button className="cta contact--emailButton">Send Mail</button>
+                <a href="mailto:drewbeland.dpt@gmail.com" className="cta">
+                    Send Mail
+                </a>
             </div>
         </section>
     )
