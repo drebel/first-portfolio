@@ -200,6 +200,7 @@ body{
 }
 
 .logo-div{
+  padding: 0.5rem 1.5rem;
 }
 
 #header{
@@ -232,7 +233,7 @@ body{
   padding: 0;
   margin: 0 1.5rem;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   list-style: none;
 }
 
@@ -269,11 +270,11 @@ body{
   }
 
   .primary-navigation ul{
-
+    list-style: none;
     inset: 0 0 0 0%;
     width: 100%;
     height: 100%;
-
+    justify-content: center;
     flex-direction: column;
     padding: min(30%, 10rem) 2rem;
     margin: 0;
@@ -343,6 +344,16 @@ h3{
 .hero--container{
   width: 100%;
   color: var(--red);
+}
+
+.hero--text{
+  position: relative;
+  left: 3rem;
+}
+
+.hero--image{
+  position: relative;
+
 }
 
 .grow-2{
