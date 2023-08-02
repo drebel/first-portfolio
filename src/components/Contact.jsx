@@ -38,7 +38,7 @@ export default function Contact(){
     // }
 
     return (
-        <section className="contact" id="contact">
+        <section className="contact grid" id="contact">
             <div className="contact--img">
                 <img src="src\assets\original-b069dfb027ddc9338205b6df5c2bd23d.jpg" alt="" />
             </div>

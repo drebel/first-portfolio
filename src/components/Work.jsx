@@ -4,7 +4,7 @@ export default function Work(){
     return (
         <section className="work flex" id="work">
             <h2>My Work</h2>
-            <article className="work--item flex">
+            <article className="work--item grid-2">
                 <div className="detail">
                     <h3 className="">Gift List</h3>
                     <p className="description">
