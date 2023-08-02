@@ -5,7 +5,7 @@ export default function About(){
         <>
         <section className="about grid-2" id="about">
             <div className="about--img">
-                <img src="src\assets\headshot.jpg" alt="headshot" />
+                <img src="/headshot.jpg" alt="headshot" />
             </div>  
             <div className="about--text">
                 <h2>About</h2>

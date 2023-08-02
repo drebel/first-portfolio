@@ -27,7 +27,7 @@ export default function Work(){
                     </p>
                 </div>
                 <div className="thumbnail">
-                    <img src="src\assets\gift-list-screenshot.png" alt="Gift List Screenshot" />
+                    <img src="/gift-list-screenshot.png" alt="Gift List Screenshot" />
                 </div>
             </article>
         </section>
