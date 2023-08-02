@@ -12,7 +12,7 @@ export default function Hero(){
             </div>
 
             <div className="hero--container grow-2 hero--image">
-                <img src="src\assets\headerimage.svg" alt="" />
+                <img src="/headerimage.svg" alt="" />
             </div>
             <div>
             </div>
