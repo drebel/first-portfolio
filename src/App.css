@@ -105,7 +105,6 @@ p {
 
   --gap: 1.5rem;
 
-  --mq-width: 720px;
 }
 
 /* --------------- */
@@ -290,7 +289,7 @@ body{
     z-index: 9999;
     background: transparent;
     background-repeat: no-repeat;
-    width: 3rem;
+    width: 50px;
     aspect-ratio: 1;
     
     border: 0;
@@ -344,10 +343,10 @@ h3{
   color: var(--red);
 }
 
-.hero--text{
+/* .hero--text{
   position: relative;
   left: 3rem;
-}
+} */
 
 .hero--image{
   position: relative;
@@ -526,7 +525,11 @@ h2{
   }
 
   .contact--email h1{
-    font-size: var(--fs-400);
+    font-size: var(--fs-200);
     margin-right: 0;
+  }
+
+  .contact--email a{
+    margin:1rem;
   }
 }
