@@ -4,7 +4,7 @@ export default function Header2(){
 
     const [isMobileNavVisible, setIsMobileNavVisible] = useState(false)
     const menuStyle = {
-        backgroundImage: isMobileNavVisible ? 'url(src/assets/cancel.svg)' : 'url(src/assets/menu.svg)'
+        backgroundImage: isMobileNavVisible ? 'url(/cancel.svg)' : 'url(/menu.svg)'
     }
 
     
@@ -24,7 +24,6 @@ export default function Header2(){
         <header id="header">
             <div id="header-container" className="primary-header flex">
             <div className='logo-div'>
-                {/* <img src='src/assets/icons8-happy-cloud-48.png' className="logo"/> */}
                 <svg 
                     fill="#d74034" 
                     height="40px" 
